@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://game1/puntuacion/cofre.png" type="Texture" id=1]
+
+[node name="Cofre" type="Sprite" groups=["puntaje"]]
+position = Vector2( 994, 27.75 )
+scale = Vector2( 0.27551, 0.264398 )
+texture = ExtResource( 1 )

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/IntroBuceofondo.mp3-d99c1b8625eb3cd7506a8a01e30c91ab.mp3str"
+
+[deps]
+
+source_file="res://game1/intro/IntroBuceofondo.mp3"
+dest_files=[ "res://.import/IntroBuceofondo.mp3-d99c1b8625eb3cd7506a8a01e30c91ab.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

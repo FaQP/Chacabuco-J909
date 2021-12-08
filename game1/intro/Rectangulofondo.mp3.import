@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Rectangulofondo.mp3-5327db16f29295a30a320b551da23012.mp3str"
+
+[deps]
+
+source_file="res://game1/intro/Rectangulofondo.mp3"
+dest_files=[ "res://.import/Rectangulofondo.mp3-5327db16f29295a30a320b551da23012.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

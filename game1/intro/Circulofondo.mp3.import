@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Circulofondo.mp3-7557a9abffdb0e92fee1f5a159eb863e.mp3str"
+
+[deps]
+
+source_file="res://game1/intro/Circulofondo.mp3"
+dest_files=[ "res://.import/Circulofondo.mp3-7557a9abffdb0e92fee1f5a159eb863e.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

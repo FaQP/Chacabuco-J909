@@ -1,0 +1,81 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://menu/Menu de juegos.png" type="Texture" id=1]
+[ext_resource path="res://menu/Logo parejas.png" type="Texture" id=2]
+[ext_resource path="res://menu/void_icon.png" type="Texture" id=3]
+[ext_resource path="res://menu/icon't.png" type="Texture" id=4]
+[ext_resource path="res://assets/back.png" type="Texture" id=5]
+[ext_resource path="res://menu/menu.gd" type="Script" id=6]
+[ext_resource path="res://sounds/button.mp3" type="AudioStream" id=7]
+[ext_resource path="res://sounds/menu.mp3" type="AudioStream" id=8]
+
+[node name="Menu" type="Node"]
+script = ExtResource( 6 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.48, 0.5 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="void_icon" type="Sprite" parent="."]
+position = Vector2( 173.775, 170.725 )
+scale = Vector2( 0.805488, 0.807457 )
+texture = ExtResource( 3 )
+
+[node name="icon\'t" type="Sprite" parent="."]
+position = Vector2( 580.25, 418.635 )
+scale = Vector2( 0.795725, 0.785725 )
+texture = ExtResource( 4 )
+offset = Vector2( -90, -9.05893 )
+
+[node name="icon\'t2" type="Sprite" parent="."]
+position = Vector2( 574.189, 181.212 )
+scale = Vector2( 0.795725, 0.785725 )
+texture = ExtResource( 4 )
+offset = Vector2( -90, -9.05893 )
+
+[node name="icon\'t3" type="Sprite" parent="."]
+position = Vector2( 894.287, 183.811 )
+scale = Vector2( 0.795725, 0.785725 )
+texture = ExtResource( 4 )
+offset = Vector2( -90, -9.05893 )
+
+[node name="icon\'t4" type="Sprite" parent="."]
+position = Vector2( 890.382, 424.488 )
+scale = Vector2( 0.795725, 0.785725 )
+texture = ExtResource( 4 )
+offset = Vector2( -90, -9.05893 )
+
+[node name="icon\'t5" type="Sprite" parent="."]
+position = Vector2( 247.068, 414.337 )
+scale = Vector2( 0.795725, 0.785725 )
+texture = ExtResource( 4 )
+offset = Vector2( -90, -9.05893 )
+
+[node name="Cards" type="TouchScreenButton" parent="."]
+position = Vector2( 103.905, 106.785 )
+scale = Vector2( 0.301536, 0.291115 )
+normal = ExtResource( 2 )
+
+[node name="Back" type="TouchScreenButton" parent="."]
+position = Vector2( 6.29961, 501.449 )
+scale = Vector2( 0.451852, 0.653682 )
+normal = ExtResource( 5 )
+
+[node name="bgm" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+autoplay = true
+
+[node name="sfx" type="Node" parent="." groups=["sfx"]]
+
+[node name="button" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource( 7 )
+volume_db = -2.0
+
+[connection signal="pressed" from="Cards" to="." method="_on_Cards_pressed"]
+[connection signal="released" from="Cards" to="." method="_on_Cards_released"]
+[connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]

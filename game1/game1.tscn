@@ -1,0 +1,115 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://game1/background.png" type="Texture" id=1]
+[ext_resource path="res://game1/circle.png" type="Texture" id=2]
+[ext_resource path="res://game1/animatedchest.tscn" type="PackedScene" id=3]
+[ext_resource path="res://game1/rectangle.png" type="Texture" id=4]
+[ext_resource path="res://game1/square.png" type="Texture" id=5]
+[ext_resource path="res://game1/triangle.png" type="Texture" id=6]
+[ext_resource path="res://game1/game1.gd" type="Script" id=7]
+[ext_resource path="res://assets/Puntos.png" type="Texture" id=8]
+[ext_resource path="res://game1/burbujas/burbujas.tscn" type="PackedScene" id=9]
+[ext_resource path="res://game1/intro/bgm.mp3" type="AudioStream" id=10]
+[ext_resource path="res://game1/intro/Circulofondo.mp3" type="AudioStream" id=11]
+[ext_resource path="res://game1/intro/Rectangulofondo.mp3" type="AudioStream" id=12]
+[ext_resource path="res://game1/intro/Cuadradofondo.mp3" type="AudioStream" id=13]
+[ext_resource path="res://game1/intro/Triangulofondo.mp3" type="AudioStream" id=14]
+[ext_resource path="res://game1/puntuacion/puntuacion.tscn" type="PackedScene" id=15]
+[ext_resource path="res://sounds/gudED.mp3" type="AudioStream" id=16]
+
+[node name="Node" type="Node"]
+script = ExtResource( 7 )
+
+[node name="background" type="TextureRect" parent="."]
+margin_right = 4000.0
+margin_bottom = 2250.0
+rect_scale = Vector2( 0.256, 0.266 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="circle" parent="." instance=ExtResource( 3 )]
+position = Vector2( -114.736, 278.685 )
+
+[node name="rectangle" parent="." instance=ExtResource( 3 )]
+position = Vector2( 135.27, 280.113 )
+
+[node name="square" parent="." instance=ExtResource( 3 )]
+position = Vector2( 375.14, 280.183 )
+
+[node name="triangle" parent="." instance=ExtResource( 3 )]
+position = Vector2( 606.161, 278.615 )
+
+[node name="circulo" type="Sprite" parent="."]
+position = Vector2( 159.92, 302.935 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+
+[node name="rectangulo" type="Sprite" parent="."]
+position = Vector2( 407.447, 301.682 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 4 )
+
+[node name="cuadrado" type="Sprite" parent="."]
+position = Vector2( 645.315, 300.189 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 5 )
+
+[node name="triangulo" type="Sprite" parent="."]
+position = Vector2( 876.499, 296.347 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 6 )
+
+[node name="butcircle" type="TouchScreenButton" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 66.742, 353.733 )
+normal = ExtResource( 8 )
+
+[node name="butrectangle" type="TouchScreenButton" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 313.687, 355.067 )
+normal = ExtResource( 8 )
+
+[node name="butsquare" type="TouchScreenButton" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 553.959, 353.733 )
+normal = ExtResource( 8 )
+
+[node name="buttriangle" type="TouchScreenButton" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 787.555, 353.733 )
+normal = ExtResource( 8 )
+
+[node name="Node2D" parent="." instance=ExtResource( 9 )]
+
+[node name="bgm" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = -10.0
+
+[node name="icircle" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = 15.0
+
+[node name="irectangle" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+volume_db = 15.0
+
+[node name="isquare" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+volume_db = 15.0
+
+[node name="itriangle" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+volume_db = 15.0
+
+[node name="puntuacion" parent="." instance=ExtResource( 15 )]
+
+[node name="gudED" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )
+volume_db = 5.0
+
+[connection signal="pressed" from="butcircle" to="." method="_on_butcircle_pressed"]
+[connection signal="pressed" from="butrectangle" to="." method="_on_butrectangle_pressed"]
+[connection signal="pressed" from="butsquare" to="." method="_on_butsquare_pressed"]
+[connection signal="pressed" from="buttriangle" to="." method="_on_buttriangle_pressed"]

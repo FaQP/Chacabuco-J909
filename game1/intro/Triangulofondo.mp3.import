@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Triangulofondo.mp3-e7a4a6810c9c04ccccaaf6a725ae8006.mp3str"
+
+[deps]
+
+source_file="res://game1/intro/Triangulofondo.mp3"
+dest_files=[ "res://.import/Triangulofondo.mp3-e7a4a6810c9c04ccccaaf6a725ae8006.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

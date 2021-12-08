@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/snowing.mp3-ac55f010f659df5901af35df64d126ca.mp3str"
+
+[deps]
+
+source_file="res://sounds/snowing.mp3"
+dest_files=[ "res://.import/snowing.mp3-ac55f010f659df5901af35df64d126ca.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

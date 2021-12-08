@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Cuadradofondo.mp3-ac32f790554b4d731ee551d98ac92f23.mp3str"
+
+[deps]
+
+source_file="res://game1/intro/Cuadradofondo.mp3"
+dest_files=[ "res://.import/Cuadradofondo.mp3-ac32f790554b4d731ee551d98ac92f23.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

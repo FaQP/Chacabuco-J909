@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/god.mp3-2df8f948a04a8f3261915e1d4eece39a.mp3str"
+
+[deps]
+
+source_file="res://sounds/god.mp3"
+dest_files=[ "res://.import/god.mp3-2df8f948a04a8f3261915e1d4eece39a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

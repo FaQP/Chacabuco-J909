@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://game2/img/background.png" type="Texture" id=1]
+
+[node name="Node" type="Node"]
+
+[node name="background" type="TextureRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+rect_scale = Vector2( 0.256, 0.267 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
