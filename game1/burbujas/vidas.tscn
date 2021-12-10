@@ -3,6 +3,6 @@
 [ext_resource path="res://game1/burbujas/burbujas_1.png" type="Texture" id=1]
 
 [node name="vidas2" type="Sprite" groups=["vida"]]
-position = Vector2( 70.8125, 41.0625 )
-scale = Vector2( 2.69207, 3.1369 )
+position = Vector2( 70.813, 48 )
+scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 1 )
