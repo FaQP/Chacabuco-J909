@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://game1/intro/background2.png" type="Texture" id=1]
 [ext_resource path="res://game1/intro/IntroBuceofondo.mp3" type="AudioStream" id=2]
 [ext_resource path="res://game1/intro/introduction.gd" type="Script" id=3]
+[ext_resource path="res://assets/Puntos.png" type="Texture" id=4]
 
 [node name="Node" type="Node"]
 script = ExtResource( 3 )
@@ -28,3 +29,10 @@ __meta__ = {
 
 [node name="introduccion" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
+
+[node name="butSkip" type="TouchScreenButton" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+scale = Vector2( 5.47594, 3.06633 )
+normal = ExtResource( 4 )
+
+[connection signal="released" from="butSkip" to="." method="_on_butSkip_released"]

@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/bac.png" type="Texture" id=1]
+[ext_resource path="res://assets/backPressed.png" type="Texture" id=2]
+
+[node name="replay" type="Node"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0, 0, 0, 0.427451 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="title_margin" type="MarginContainer" parent="."]
+margin_left = 106.0
+margin_top = 60.0
+margin_right = 924.0
+margin_bottom = 483.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu" type="VBoxContainer" parent="title_margin"]
+margin_right = 818.0
+margin_bottom = 423.0
+
+[node name="lose" type="HBoxContainer" parent="title_margin/menu"]
+visible = false
+margin_right = 818.0
+
+[node name="win" type="HBoxContainer" parent="title_margin/menu"]
+visible = false
+margin_right = 818.0
+
+[node name="replayBut" type="HBoxContainer" parent="title_margin/menu"]
+margin_right = 818.0
+
+[node name="replay" type="TouchScreenButton" parent="title_margin/menu/replayBut"]
+position = Vector2( 603, 296 )
+
+[node name="quitBut" type="HBoxContainer" parent="title_margin/menu"]
+margin_top = 4.0
+margin_right = 818.0
+margin_bottom = 4.0
+
+[node name="quit" type="TouchScreenButton" parent="title_margin/menu/quitBut"]
+position = Vector2( 169, 303 )
+scale = Vector2( 0.32645, 0.345714 )
+normal = ExtResource( 1 )
+pressed = ExtResource( 2 )
