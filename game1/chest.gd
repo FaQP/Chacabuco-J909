@@ -1,10 +1,8 @@
 extends Node
 
-onready var button = $butt
 onready var empty = $empty
 onready var treasure = $treasure
 onready var anim = $AnimationPlayer
-onready var bien = $bien
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -26,12 +24,14 @@ func cofreVacio():
 	treasure.hide()
 
 func animVacio():
+	get_tree().get_nodes_in_group("sfx")[0].get_node("mal").play()
 	treasure.hide()
 	anim.play("chestanimated")
+	yield(anim, "animation_finished")
 
 func animLleno():
 	empty.hide()
-	bien.play()
+	get_tree().get_nodes_in_group("sfx")[0].get_node("bien").play()
 	anim.play("tresurechest")
 	yield(anim, "animation_finished")
 

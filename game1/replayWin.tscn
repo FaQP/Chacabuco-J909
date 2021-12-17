@@ -1,0 +1,84 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://game1/replayWin.gd" type="Script" id=1]
+[ext_resource path="res://assets/bac.png" type="Texture" id=2]
+[ext_resource path="res://assets/backPressed.png" type="Texture" id=3]
+[ext_resource path="res://game1/background.png" type="Texture" id=4]
+[ext_resource path="res://sounds/winGame1.mp3" type="AudioStream" id=5]
+[ext_resource path="res://assets/replayBut.png" type="Texture" id=6]
+[ext_resource path="res://assets/replayButPressed.png" type="Texture" id=7]
+[ext_resource path="res://assets/Rockstar-ExtraBold.otf" type="DynamicFontData" id=8]
+[ext_resource path="res://sounds/button.mp3" type="AudioStream" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 135
+outline_size = 2
+outline_color = Color( 0, 1, 0.172549, 1 )
+font_data = ExtResource( 8 )
+
+[node name="Win" type="Node"]
+script = ExtResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color( 0.32549, 0.321569, 0.321569, 1 )
+margin_right = 4000.0
+margin_bottom = 2250.0
+rect_scale = Vector2( 0.256, 0.267 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="title_margin" type="MarginContainer" parent="."]
+margin_left = 106.0
+margin_top = 115.0
+margin_right = 924.0
+margin_bottom = 483.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu" type="VBoxContainer" parent="title_margin"]
+margin_right = 818.0
+margin_bottom = 368.0
+
+[node name="lose" type="HBoxContainer" parent="title_margin/menu"]
+margin_right = 818.0
+margin_bottom = 129.0
+alignment = 1
+
+[node name="Win" type="Label" parent="title_margin/menu/lose"]
+modulate = Color( 0.905882, 0.870588, 0.870588, 1 )
+margin_left = 161.0
+margin_right = 656.0
+margin_bottom = 129.0
+custom_fonts/font = SubResource( 1 )
+text = "Ganaste"
+valign = 1
+
+[node name="quit" type="TouchScreenButton" parent="title_margin/menu"]
+position = Vector2( -63, 280 )
+scale = Vector2( 0.226155, 0.211429 )
+normal = ExtResource( 2 )
+pressed = ExtResource( 3 )
+
+[node name="replay" type="TouchScreenButton" parent="title_margin/menu"]
+position = Vector2( 516, 292 )
+scale = Vector2( 0.708333, 0.420339 )
+normal = ExtResource( 6 )
+pressed = ExtResource( 7 )
+
+[node name="sfx" type="Node" parent="." groups=["sfx"]]
+
+[node name="button" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource( 9 )
+volume_db = -2.0
+
+[node name="god" type="AudioStreamPlayer" parent="sfx"]
+stream = ExtResource( 5 )
+volume_db = 18.0
+
+[connection signal="pressed" from="title_margin/menu/quit" to="." method="_on_quit_pressed"]
+[connection signal="released" from="title_margin/menu/quit" to="." method="_on_quit_released"]
+[connection signal="pressed" from="title_margin/menu/replay" to="." method="_on_replay_pressed"]
+[connection signal="released" from="title_margin/menu/replay" to="." method="_on_replay_released"]

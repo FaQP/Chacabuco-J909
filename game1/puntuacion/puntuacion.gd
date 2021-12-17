@@ -2,7 +2,7 @@ extends Node2D
 
 
 var cofre_punt = 0
-var offset_punt = 50
+var offset_punt = 70 #Distancia en x entre cofres
 var lista_cofres = []
 export (PackedScene) var spr_cofre
 

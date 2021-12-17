@@ -3,6 +3,6 @@
 [ext_resource path="res://game1/cofrePlata.png" type="Texture" id=1]
 
 [node name="Cofre" type="Sprite" groups=["puntaje"]]
-position = Vector2( 990, 33 )
-scale = Vector2( 0.04, 0.04 )
+position = Vector2( 975, 49 )
+scale = Vector2( 0.055, 0.055 )
 texture = ExtResource( 1 )

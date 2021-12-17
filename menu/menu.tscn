@@ -62,8 +62,13 @@ scale = Vector2( 0.301536, 0.291115 )
 normal = ExtResource( 2 )
 
 [node name="Back" type="TouchScreenButton" parent="."]
+<<<<<<< Updated upstream
 position = Vector2( 6.29961, 501.449 )
 scale = Vector2( 0.451852, 0.653682 )
+=======
+position = Vector2( -89, 479 )
+scale = Vector2( 0.234022, 0.184286 )
+>>>>>>> Stashed changes
 normal = ExtResource( 5 )
 
 [node name="bgm" type="AudioStreamPlayer" parent="."]

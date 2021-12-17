@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://game1/puntuacion/puntuacion.gd" type="Script" id=1]
-[ext_resource path="res://game1/cofrePlata.png" type="Texture" id=2]
 [ext_resource path="res://game1/puntuacion/Cofre.tscn" type="PackedScene" id=3]
 
 [node name="puntuacion" type="Node2D"]
@@ -11,6 +10,5 @@ spr_cofre = ExtResource( 3 )
 [node name="CanvasLayer" type="CanvasLayer" parent="." groups=["gui"]]
 
 [node name="Cofre" parent="CanvasLayer" instance=ExtResource( 3 )]
-position = Vector2( 990, 33 )
-scale = Vector2( 0.04, 0.04 )
-texture = ExtResource( 2 )
+visible = false
+position = Vector2( 975, 49 )

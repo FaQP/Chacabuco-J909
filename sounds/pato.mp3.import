@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/pato.mp3-377c9cd9e916f97518fe6b5371fe07f2.mp3str"
+
+[deps]
+
+source_file="res://sounds/pato.mp3"
+dest_files=[ "res://.import/pato.mp3-377c9cd9e916f97518fe6b5371fe07f2.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

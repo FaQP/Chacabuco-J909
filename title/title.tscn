@@ -24,26 +24,26 @@ __meta__ = {
 }
 
 [node name="name" type="MarginContainer" parent="."]
-margin_left = 428.0
-margin_top = 134.0
-margin_right = 660.0
-margin_bottom = 347.0
+margin_left = 314.0
+margin_top = 156.0
+margin_right = 722.0
+margin_bottom = 369.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="VBoxContainer" parent="name" instance=ExtResource( 2 )]
-margin_right = 232.0
+margin_right = 408.0
 margin_bottom = 213.0
 
 [node name="but_play" type="TouchScreenButton" parent="."]
-position = Vector2( 332.34, 333.754 )
+position = Vector2( 334, 326 )
 scale = Vector2( 0.378413, 0.305015 )
 normal = ExtResource( 4 )
 pressed = ExtResource( 6 )
 
 [node name="but_ext" type="TouchScreenButton" parent="."]
-position = Vector2( 332.34, 445.477 )
+position = Vector2( 333, 456 )
 scale = Vector2( 0.374242, 0.305015 )
 normal = ExtResource( 8 )
 pressed = ExtResource( 5 )

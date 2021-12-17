@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://game1/background.png" type="Texture" id=1]
 [ext_resource path="res://game1/circle.png" type="Texture" id=2]
@@ -15,7 +15,8 @@
 [ext_resource path="res://game1/intro/Cuadradofondo.mp3" type="AudioStream" id=13]
 [ext_resource path="res://game1/intro/Triangulofondo.mp3" type="AudioStream" id=14]
 [ext_resource path="res://game1/puntuacion/puntuacion.tscn" type="PackedScene" id=15]
-[ext_resource path="res://sounds/gudED.mp3" type="AudioStream" id=16]
+[ext_resource path="res://assets/sound.png" type="Texture" id=16]
+[ext_resource path="res://assets/soundPressed.png" type="Texture" id=17]
 
 [node name="Node" type="Node"]
 script = ExtResource( 7 )
@@ -30,16 +31,16 @@ __meta__ = {
 }
 
 [node name="circle" parent="." instance=ExtResource( 3 )]
-position = Vector2( -114.736, 278.685 )
+position = Vector2( 129, 481 )
 
 [node name="rectangle" parent="." instance=ExtResource( 3 )]
-position = Vector2( 135.27, 280.113 )
+position = Vector2( 383, 485 )
 
 [node name="square" parent="." instance=ExtResource( 3 )]
-position = Vector2( 375.14, 280.183 )
+position = Vector2( 629, 496 )
 
 [node name="triangle" parent="." instance=ExtResource( 3 )]
-position = Vector2( 606.161, 278.615 )
+position = Vector2( 866, 492 )
 
 [node name="circulo" type="Sprite" parent="."]
 position = Vector2( 159.92, 300 )
@@ -82,6 +83,7 @@ position = Vector2( 787.555, 353.733 )
 normal = ExtResource( 8 )
 
 [node name="Node2D" parent="." instance=ExtResource( 9 )]
+position = Vector2( 14, -20 )
 
 [node name="bgm" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
@@ -105,11 +107,14 @@ volume_db = 15.0
 
 [node name="puntuacion" parent="." instance=ExtResource( 15 )]
 
-[node name="gudED" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 16 )
-volume_db = 5.0
+[node name="replaySound" type="TouchScreenButton" parent="."]
+position = Vector2( 390, 7 )
+scale = Vector2( 0.247664, 0.25731 )
+normal = ExtResource( 16 )
+pressed = ExtResource( 17 )
 
 [connection signal="pressed" from="butcircle" to="." method="_on_butcircle_pressed"]
 [connection signal="pressed" from="butrectangle" to="." method="_on_butrectangle_pressed"]
 [connection signal="pressed" from="butsquare" to="." method="_on_butsquare_pressed"]
 [connection signal="pressed" from="buttriangle" to="." method="_on_buttriangle_pressed"]
+[connection signal="released" from="replaySound" to="." method="_on_replaySound_released"]

@@ -38,7 +38,6 @@ spr_vidas = ExtResource( 2 )
 [node name="gui" type="CanvasLayer" parent="." groups=["gui"]]
 
 [node name="vidas2" parent="gui" instance=ExtResource( 2 )]
-position = Vector2( 70.813, 48 )
 
 [node name="error" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )

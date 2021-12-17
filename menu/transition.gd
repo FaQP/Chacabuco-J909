@@ -1,7 +1,7 @@
 extends CanvasLayer
-
+#Variables
 onready var anim : AnimationPlayer = $AnimationPlayer
-
+#Funcion de cambio de escena
 func change_scene_loc(path : String):
 	layer = 1
 	#fade in
@@ -13,13 +13,10 @@ func change_scene_loc(path : String):
 	anim.play_backwards("fade")
 	yield(anim, "animation_finished")
 	layer = -1
-
+#Funcion para cerrar el juego
 func salir():
 	layer = 1
 	#fade in
 	anim.play("fade")
 	yield(anim, "animation_finished") #Primero el nodo del que voy a esperar una señal, y luego la señal que esperaré
 	get_tree().quit()
-
-func _ready():
-	pass # Replace with function body.
