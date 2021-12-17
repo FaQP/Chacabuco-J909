@@ -23,12 +23,12 @@ func crear_vidas():
 		var newVida = spr_vidas.instance()
 		get_tree().get_nodes_in_group(\"gui\")[0].add_child(newVida)
 		newVida.global_position.x += offset_vidas * i
-		lista_vidas.append(newVida)
+		lista_vidas.append(newVida) #Se crean cantidades determinadas de objetos \"vida\"
 
-func quitar_vida():
-	vidas_j1 -= 1
+func quitar_vida(): #Quita vidas
+	vidas_j1 -= 1 
 	fallo.play()
-	lista_vidas[vidas_j1].queue_free()
+	lista_vidas[vidas_j1].queue_free() #Se quita el ultimo objeto de la lista.
 "
 
 [node name="Node2D" type="Node2D"]

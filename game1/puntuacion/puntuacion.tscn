@@ -11,4 +11,3 @@ spr_cofre = ExtResource( 3 )
 
 [node name="Cofre" parent="CanvasLayer" instance=ExtResource( 3 )]
 visible = false
-position = Vector2( 975, 49 )

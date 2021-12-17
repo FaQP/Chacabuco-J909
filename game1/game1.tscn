@@ -87,7 +87,7 @@ position = Vector2( 14, -20 )
 
 [node name="bgm" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
-volume_db = -10.0
+volume_db = -6.0
 
 [node name="icircle" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
